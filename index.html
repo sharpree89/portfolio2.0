@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Preeya Sharma</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <style>
+     *{
+       font-family: "Muli", sans-serif;
+     }
+    </style>
+  </head>
+  <body ng-app="portfolio">
+
+    <!-- Nav Bar -->
+
+    <nav>
+      <div class="nav-wrapper">
+        <!-- <a href="#" class="brand-logo">Logo</a> -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#/home">home</a></li>
+          <li><a href="#/about">about</a></li>
+          <li><a href="#/projects">projects</a></li>
+          <li><a href="#/contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- UI View -->
+
+    <div>
+      <ui-view></ui-view>
+    </div>
+
+    <!-- Home Template -->
+
+    <script type="text/ng-template" id="/home.html">
+      <div class="page-header">
+        <h1>Preeya Sharma's Portfolio</h1>
+        <h2>Full Stack Web Developer</h2>
+        <hr>
+      </div>
+    </script>
+
+    <!-- About Template -->
+
+    <script type="text/ng-template" id="/about.html">
+      <h2>I'm Cool</h2>
+    </script>
+
+    <!-- Projects Template -->
+
+    <script type="text/ng-template" id="/projects.html">
+      <h2>My Projects</h2>
+      <div ng-repeat="project in projects">
+        <h3>{{ project.title }}</h3>
+        <img src="{{ project.image }}">
+        <br>
+        <p>Created with {{ project.tech }}</p>
+        <a class="waves-effect waves-light btn">View Project</a>
+      </div>
+    </script>
+
+    <!-- Contact Template -->
+
+    <script type="text/ng-template" id="/contact.html">
+      <h2>Say Hello!</h2>
+    </script>
+
+  </body>
+</html>
