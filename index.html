@@ -9,46 +9,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="app.js"></script>
     <script type="text/javascript">
+      $(document).ready(function() {
+        $(".button-collapse").sideNav();
 
+      });
 
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
      *{
        font-family: "Muli", sans-serif;
      }
+
+     .navbar {
+        background: url("/static/images/wc-banner3.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+     }
+
+     #home-header {
+       margin: 15%;
+       width: 100;
+     }
+
+     .name {
+       max-width: 100%;
+       height: auto;
+     }
+
+     #home-header p {
+       font-size: 20px;
+       font-weight: 200;
+       color: #7286cc;
+     }
+
     </style>
   </head>
   <body ng-app="portfolio">
 
     <!-- Nav Bar -->
 
-    <nav>
-      <div class="nav-wrapper">
-        <!-- <a href="#" class="brand-logo">Logo</a> -->
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#/home">home</a></li>
-          <li><a href="#/about">about</a></li>
-          <li><a href="#/projects">projects</a></li>
-          <li><a href="#/contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav class="navbar">
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/home">home</a></li>
+        <li><a href="#/about">about</a></li>
+        <li><a href="#/projects">projects</a></li>
+        <li><a href="#/contact">contact</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/home">home</a></li>
+        <li><a href="#/about">about</a></li>
+        <li><a href="#/projects">projects</a></li>
+        <li><a href="#/contact">contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <!-- UI View -->
 
     <div>
-      <ui-view></ui-view>
+      <center>
+        <ui-view></ui-view>
+      </center>
     </div>
 
     <!-- Home Template -->
 
     <script type="text/ng-template" id="/home.html">
-      <div class="page-header">
-        <h1>Preeya Sharma's Portfolio</h1>
-        <h2>Full Stack Web Developer</h2>
-        <hr>
+      <div id="home-header">
+        <img src="/static/images/name.png" class="name">
+        <p>full stack web developer</p>
       </div>
     </script>
 
