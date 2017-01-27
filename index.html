@@ -18,6 +18,7 @@
 
     </script>
     <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -37,39 +38,37 @@
 
      #home-header {
        margin: 15%;
-       width: 50%;
+       border: 1px solid black;
      }
 
      .name {
-       max-width: 100%;
-       height: auto;
+       font-family: "Homemade Apple", cursive;
+       font-size: 5em;
+       color: #7F9BFF;
+       margin-bottom: 7.5%;
      }
 
       .tagline {
-        font-size: 20px;
+        font-size: 2em;
         font-weight: 300;
         color: #7F9BFF;
         letter-spacing: 1px;
+        margin-bottom: 5%;
+        opacity: 0.75;
       }
 
      .nav-links a {
-       font-size: 17px !important;
+       font-size: 1.15em !important;
      }
 
      i {
        font-size: 26px !important;
      }
 
-     .projects-link {
-       background-color: #7F9BFF;
-       color: white;
-       padding: 10px 20px;
-     }
-
-     .projects-link:hover, .projects-link:active {
-       background-color: #AACAFF;
-       color: white;
-       padding: 10px 20px;
+     .brand-logo {
+       font-family: "Homemade Apple", cursive;
+       margin-left: 1.5%;
+       font-size: 2em !important;
      }
 
      .btn {
@@ -88,6 +87,7 @@
      .border {
        opacity: 0.5;
        border-bottom: 1px solid #7F9BFF;
+       margin-bottom: 5%;
      }
 
     </style>
@@ -98,6 +98,7 @@
 
   <nav class="navbar" ng-controller="MainCtrl">
     <div class="nav-wrapper">
+      <a href="#" class="brand-logo">ps</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li class="nav-links"><a href="#/">home</a></li>
@@ -126,12 +127,10 @@
 
     <script type="text/ng-template" id="/home.html">
       <div id="home-header">
-        <img src="/static/images/name.png" class="name">
+        <h1 class="name">preeya sharma</h1>
         <p class="tagline">full stack web developer</p>
         <div class="border"></div>
-        <br>
-        <br>
-        <a class="projects-link" href="#/projects">view projects</a>
+        <a class="waves-effect waves-light btn" href="#/projects">view projects</a>
       </div>
     </script>
 
