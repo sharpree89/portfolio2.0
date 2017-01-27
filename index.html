@@ -5,10 +5,12 @@
     <title>Preeya Sharma</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="app.js"></script>
     <script type="text/javascript">
+
       $(document).ready(function() {
         $(".button-collapse").sideNav();
 
@@ -21,6 +23,7 @@
     <style>
      *{
        font-family: "Muli", sans-serif;
+       font-weight: 300;
      }
 
      .navbar {
@@ -29,11 +32,12 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        box-shadow: none !important;
      }
 
      #home-header {
        margin: 15%;
-       width: 100;
+       width: 50%;
      }
 
      .name {
@@ -41,10 +45,49 @@
        height: auto;
      }
 
-     #home-header p {
-       font-size: 20px;
-       font-weight: 200;
-       color: #7286cc;
+      .tagline {
+        font-size: 20px;
+        font-weight: 300;
+        color: #7F9BFF;
+        letter-spacing: 1px;
+      }
+
+     .nav-links a {
+       font-size: 17px !important;
+     }
+
+     i {
+       font-size: 26px !important;
+     }
+
+     .projects-link {
+       background-color: #7F9BFF;
+       color: white;
+       padding: 10px 20px;
+     }
+
+     .projects-link:hover, .projects-link:active {
+       background-color: #AACAFF;
+       color: white;
+       padding: 10px 20px;
+     }
+
+     .btn {
+       box-shadow: none !important;
+       border-radius: 0px !important;
+       background-color: #7F9BFF;
+       text-transform: lowercase;
+       font-size: 16px;
+     }
+
+     .btn:hover, .btn:active {
+        background-color: #AACAFF;
+
+     }
+
+     .border {
+       opacity: 0.5;
+       border-bottom: 1px solid #7F9BFF;
      }
 
     </style>
@@ -53,20 +96,20 @@
 
     <!-- Nav Bar -->
 
-  <nav class="navbar">
+  <nav class="navbar" ng-controller="MainCtrl">
     <div class="nav-wrapper">
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#/home">home</a></li>
-        <li><a href="#/about">about</a></li>
-        <li><a href="#/projects">projects</a></li>
-        <li><a href="#/contact">contact</a></li>
+        <li class="nav-links"><a href="#/">home</a></li>
+        <li class="nav-links"><a href="#/about">about</a></li>
+        <li class="nav-links"><a href="#/projects">projects</a></li>
+        <li class="nav-links"><a href="#/contact">contact</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#/home">home</a></li>
-        <li><a href="#/about">about</a></li>
-        <li><a href="#/projects">projects</a></li>
-        <li><a href="#/contact">contact</a></li>
+        <li class="nav-links"><a href="#/">home</a></li>
+        <li class="nav-links"><a href="#/about">about</a></li>
+        <li class="nav-links"><a href="#/projects">projects</a></li>
+        <li class="nav-links"><a href="#/contact">contact</a></li>
       </ul>
     </div>
   </nav>
@@ -84,7 +127,11 @@
     <script type="text/ng-template" id="/home.html">
       <div id="home-header">
         <img src="/static/images/name.png" class="name">
-        <p>full stack web developer</p>
+        <p class="tagline">full stack web developer</p>
+        <div class="border"></div>
+        <br>
+        <br>
+        <a class="projects-link" href="#/projects">view projects</a>
       </div>
     </script>
 
@@ -103,7 +150,7 @@
         <img src="{{ project.image }}">
         <br>
         <p>Created with {{ project.tech }}</p>
-        <a class="waves-effect waves-light btn">View Project</a>
+        <a class="waves-effect waves-light btn">read more</a>
       </div>
     </script>
 

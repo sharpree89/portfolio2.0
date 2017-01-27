@@ -1,4 +1,4 @@
-var app = angular.module("portfolio", ["ui.router"]);
+var app = angular.module("portfolio", ["ui.router", 'ngAnimate']);
 
 app.controller("MainCtrl", [
   "$scope",
@@ -12,7 +12,7 @@ app.controller("MainCtrl", [
       {title: "Wizard's Duel", tech: "Python (Django)", image: "https://s-media-cache-ak0.pinimg.com/originals/0c/38/68/0c3868e0153a621272b198c68620894c.jpg", link: "https://google.com"},
       {title: "Timely", tech: "Python (Django, SQL)", image: "https://s-media-cache-ak0.pinimg.com/originals/0c/38/68/0c3868e0153a621272b198c68620894c.jpg", link: "https://google.com"},
       {title: "Portfolio", tech: "Javascript (AngularJS, Express, Node.js)", image: "https://s-media-cache-ak0.pinimg.com/originals/0c/38/68/0c3868e0153a621272b198c68620894c.jpg", link: "https://google.com"}
-    ];
+    ]
 
   }
 ])
@@ -24,7 +24,7 @@ app.config([
 
     $stateProvider
       .state("home", {
-        url: "/home",
+        url: "/",
         templateUrl: "/home.html",
         controller: "MainCtrl"
       })
